@@ -1,0 +1,45 @@
+   .pacifico-regular {
+      font-family: "Pacifico", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+
+    /* Splash screen styles */
+    /* Splash screen styles */
+  #splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 2s ease, transform 2s ease;
+  }
+
+  #splash img {
+    max-width: 250px;
+    height: auto;
+    animation: pulse 2s infinite;
+  }
+
+  /* Image gentle pulse animation */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+  }
+
+  /* Fade & move when loaded */
+  body.loaded #splash {
+    opacity: 0;
+    transform: scale(1.2) translateY(-80px); /* zoom out & slide */
+    pointer-events: none;
+  }
