@@ -7,19 +7,48 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-<style>
-  .pacifico-regular {
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <style>
+    .pacifico-regular {
+      font-family: "Pacifico", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
 
-</style>
+    /* Splash screen styles */
+    #splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.8s ease;
+    }
 
+    #splash img {
+      max-width: 250px;
+      height: auto;
+    }
+
+    body.loaded #splash {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body class="font-sans text-gray-800">
+  
+  <!-- Splash Screen -->
+  <div id="splash">
+    <img src="./images/cropped-logo.png" alt="Loading...">
+  </div>
+
   <!-- Navbar -->
   <nav class="fixed w-full bg-white shadow z-50">
     <div class="container mx-auto flex items-center justify-between px-4 py-3">
@@ -58,8 +87,7 @@
       <img src="./images/14.jpg" class="rounded-lg shadow-md">
       <div>
         <h2 class="text-3xl font-bold mb-4">About Us</h2>
-        <p class="text-gray-600 mb-4">Shivarchitect, led by architect Nirmal Saini, is a leading firm with 25 years of experience in creating dynamic and functional spaces. The firm offers a comprehensive suite of services including architecture, engineering, interior design, and valuation, providing clients with a holistic approach to their projects. Shivarchitect is committed to blending innovative design with structural integrity to deliver bespoke, high-quality solutions.</p>
-        
+        <p class="text-gray-600 mb-4">Shivarchitect, led by architect Mrs Nirmal Saini, is a leading firm with 25 years of experience in creating dynamic and functional spaces. The firm offers a comprehensive suite of services including architecture, engineering, interior design, and valuation, providing clients with a holistic approach to their projects. Shivarchitect is committed to blending innovative design with structural integrity to deliver bespoke, high-quality solutions.</p>
       </div>
     </div>
   </section>
@@ -84,20 +112,16 @@
           <h5 class="text-xl font-semibold mb-2">Interior Design</h5>
           <p>Creative interiors that balance aesthetics and functionality.</p>
         </div>
-<div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
-  <i class='bx bxs-bank text-5xl text-blue-600 mb-4'></i>
-  <h5 class="text-xl font-semibold mb-2">Valuation</h5>
-  <p>Accurate property valuation services to determine true market worth.</p>
-</div>
-
-<div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
-  <i class='bx bxs-hard-hat text-5xl text-green-600 mb-4'></i>
-  <h5 class="text-xl font-semibold mb-2">Engineers</h5>
-  <p>Professional engineering solutions ensuring quality, safety, and innovation.</p>
-</div>
-
-
-       
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
+          <i class='bx bxs-bank text-5xl text-blue-600 mb-4'></i>
+          <h5 class="text-xl font-semibold mb-2">Valuation</h5>
+          <p>Accurate property valuation services to determine true market worth.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
+          <i class='bx bxs-hard-hat text-5xl text-green-600 mb-4'></i>
+          <h5 class="text-xl font-semibold mb-2">Engineers</h5>
+          <p>Professional engineering solutions ensuring quality, safety, and innovation.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -136,42 +160,34 @@
           <button type="submit" class="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600">Send Message</button>
         </form>
         
-        <div class="w-full ">
-            <div class="text-left space-y-2">
-  <p class="font-medium">📍 Rotary Chowk, near Old Bus Stand, Thanesar, Haryana 136118</p>
-  <p class="font-medium">📞 <a href="tel:+919896207016" class="text-yellow-600 hover:underline">+91 98962 07016</a></p>
-  <p class="font-medium">✉️ <a href="mailto:devinirmalabcd@gmail.com" class="text-yellow-600 hover:underline">devinirmalabcd@gmail.com</a></p>
-</div>
-
-<div class="w-full h-[400px] rounded-lg overflow-hidden shadow">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864.0531843765266!2d76.8351662696333!3d29.973315598434976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e47b3030c183b%3A0x1b94dda3a89bd761!2sSupreme%20Associates!5e0!3m2!1sen!2sin!4v1758087218890!5m2!1sen!2sin" 
-    class="w-full h-full border-0"
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-
-
-
+        <div class="w-full">
+          <div class="text-left space-y-2">
+            <p class="font-medium">📍 Rotary Chowk, near Old Bus Stand, Thanesar, Haryana 136118</p>
+            <p class="font-medium">📞 <a href="tel:+919896207016" class="text-yellow-600 hover:underline">+91 98962 07016</a></p>
+            <p class="font-medium">✉️ <a href="mailto:devinirmalabcd@gmail.com" class="text-yellow-600 hover:underline">devinirmalabcd@gmail.com</a></p>
+          </div>
+          <div class="w-full h-[400px] rounded-lg overflow-hidden shadow">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864.0531843765266!2d76.8351662696333!3d29.973315598434976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e47b3030c183b%3A0x1b94dda3a89bd761!2sSupreme%20Associates!5e0!3m2!1sen!2sin!4v1758087218890!5m2!1sen!2sin" 
+              class="w-full h-full border-0"
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-<footer class="bg-gray-900 text-white text-center py-6">
-  <p>&copy; 2025 Shiv Architect. All Rights Reserved.</p>
-  <p class="mt-2 text-gray-400">
-    Rotary Chowk, near Old Bus Stand, Thanesar, Haryana 136118
-  </p>
-  <p class="mt-1 text-gray-400">
-    📞 <a href="tel:+919896207016" class="hover:underline">+91 98962 07016</a>
-  </p>
-</footer>
-
-
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 Shiv Architect. All Rights Reserved.</p>
+    <p class="mt-2 text-gray-400">Rotary Chowk, near Old Bus Stand, Thanesar, Haryana 136118</p>
+    <p class="mt-1 text-gray-400">
+      📞 <a href="tel:+919896207016" class="hover:underline">+91 98962 07016</a>
+    </p>
+  </footer>
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/9896207016" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
@@ -182,6 +198,14 @@
     // Mobile menu toggle
     document.getElementById("menuBtn").addEventListener("click", () => {
       document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+
+    // Splash screen logic
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+      setTimeout(() => {
+        document.getElementById("splash").style.display = "none";
+      }, 60000); // delay for fade-out
     });
   </script>
 </body>
