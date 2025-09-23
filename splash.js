@@ -7,6 +7,6 @@
       // Fully remove after transition
       setTimeout(() => {
         document.getElementById("splash").style.display = "none";
-      }, 1000); // must match transition duration
-    }, 500); // delay before fade starts
+      }, 200); // must match transition duration
+    }, 200); // delay before fade starts
   });
