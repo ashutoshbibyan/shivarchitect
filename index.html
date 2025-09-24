@@ -1,178 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shiv Architect</title>
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Shadows+Into+Light&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./main.css">
-  
+  <title>Site Under Maintenance</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      max-width: 500px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #e63946;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #e63946;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 15px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
-
-<body class="font-sans text-gray-800">
-
-  <!-- Splash Screen -->
-  <div id="splash">
-    <img src="./images/cropped-logo.png" alt="Loading...">
+<body>
+  <div class="container">
+    <div class="loader"></div>
+    <h1>We’ll Be Back Soon!</h1>
+    <p>Our website is currently undergoing scheduled maintenance.  
+       Thank you for your patience — we’ll be back online shortly.</p>
+    <p>– The Team</p>
   </div>
-
-  <!-- Navbar -->
-  <nav class="fixed w-full bg-white shadow z-50">
-    <div class="container mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#home" class="text-2xl font-bold text-gray-900 pacifico-regular font-medium">Shiv Architect</a>
-      <div class="space-x-6 hidden md:flex">
-        <a href="#home" class="hover:text-yellow-600">Home</a>
-        <a href="#about" class="hover:text-yellow-600">About</a>
-        <a href="#services" class="hover:text-yellow-600">Services</a>
-        <a href="#work" class="hover:text-yellow-600">Projects</a>
-        <a href="#contact" class="hover:text-yellow-600">Contact</a>
-      </div>
-      <button aria-label="menu button" id="menuBtn" class="md:hidden text-3xl"><i class='bx bx-menu'></i></button>
-    </div>
-    <div id="mobileMenu" class="hidden flex-col bg-gray-100 md:hidden px-4 pb-3 space-y-2">
-      <a href="#home" class="block">Home</a>
-      <a href="#about" class="block">About</a>
-      <a href="#services" class="block">Services</a>
-      <a href="#work" class="block">Projects</a>
-      <a href="#contact" class="block">Contact</a>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="home" class="h-screen bg-cover bg-center bg-no-repeat   flex flex-col justify-center items-center text-white relative"
-    style="background-image:url('./images/05.jpg')">
-    <div class="absolute inset-0 bg-black/50"></div>
-    <div class="relative z-10 text-center">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">Designing Spaces That Inspire</h1>
-      <p class="text-lg md:text-xl mb-6">Shiv Architect – Building Dreams into Reality</p>
-      <a href="#work" class="bg-yellow-600 text-white px-8 py-3 rounded shadow hover:bg-yellow-800">Explore Projects</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 container mx-auto px-4">
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <img src="./images/staff.jpeg" alt="banner image" class="rounded-lg shadow-md">
-      <div>
-        <h2 class="text-3xl font-bold mb-4">About Us</h2>
-        <p class="text-gray-600 mb-4">Shivarchitect, led by architect Mrs Nirmal Saini, is a leading firm with 25 years
-          of experience in creating dynamic and functional spaces. The firm offers a comprehensive suite of services
-          including architecture, engineering, interior design, and valuation, providing clients with a holistic
-          approach to their projects. Shivarchitect is committed to blending innovative design with structural integrity
-          to deliver bespoke, high-quality solutions.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="bg-gray-50 py-20 px-4">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-12">Our Services</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
-          <i class='bx bxs-home text-5xl text-yellow-500 mb-4'></i>
-          <h5 class="text-xl font-semibold mb-2">Residential Design</h5>
-          <p>Modern and functional home designs tailored to your lifestyle.</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
-          <i class='bx bxs-business text-5xl text-yellow-500 mb-4'></i>
-          <h5 class="text-xl font-semibold mb-2">Commercial Projects</h5>
-          <p>Innovative architectural solutions for businesses and offices.</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
-          <i class='bx bxs-paint text-5xl text-yellow-500 mb-4'></i>
-          <h5 class="text-xl font-semibold mb-2">Interior Design</h5>
-          <p>Creative interiors that balance aesthetics and functionality.</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
-          <i class='bx bxs-bank text-5xl text-blue-600 mb-4'></i>
-          <h5 class="text-xl font-semibold mb-2">Valuation</h5>
-          <p>Accurate property valuation services to determine true market worth.</p>
-        </div>
-        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg">
-          <i class='bx bxs-hard-hat text-5xl text-green-600 mb-4'></i>
-          <h5 class="text-xl font-semibold mb-2">Engineers</h5>
-          <p>Professional engineering solutions ensuring quality, safety, and innovation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Work/Projects Section -->
-  <section id="work" class="py-20 container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">Our Projects</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <img src="./images/02.jpg" alt="project image one" class="rounded-lg shadow-md w-full h-64 object-cover">
-      <img src="./images/03.jpg" alt="project image two" class="rounded-lg shadow-md w-full h-64 object-cover">
-      <img src="./images/07.jpg" alt="project image three" class="rounded-lg shadow-md w-full h-64 object-cover">
-      <img src="./images/04.jpg" alt="project image four" class="rounded-lg shadow-md w-full h-64 object-cover">
-      <img src="./images/05.jpg" alt="project image five" class="rounded-lg shadow-md w-full h-64 object-cover">
-      <img src="./images/13.jpg" alt="project image six" class="rounded-lg shadow-md w-full h-64 object-cover">
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="bg-gray-50 py-20 px-4">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-12">Contact Us</h2>
-      <div class="grid md:grid-cols-2 gap-10">
-        <form method="post" action="https://formspree.io/f/mpwyzwpp" class="space-y-4 text-left">
-          <div>
-            <label class="block font-medium">Name</label>
-            <input type="text" name="name" class="w-full border rounded px-3 py-2" required>
-          </div>
-          <div>
-            <label class="block font-medium">Email</label>
-            <input type="email" name="email" class="w-full border rounded px-3 py-2" required>
-          </div>
-          <div>
-            <label class="block font-medium">Message</label>
-            <textarea rows="4" name="message" class="w-full border rounded px-3 py-2" required></textarea>
-          </div>
-          <button aria-label="submit" type="submit" class="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600">Send
-            Message</button>
-        </form>
-
-        <div class="w-full">
-          <div class="text-left space-y-2">
-            <p class="font-medium">📍 Rotary Chowk, near Old Bus Stand, Thanesar, Haryana 136118</p>
-            <p class="font-medium">📞 <a href="tel:+919896207016" class="text-yellow-600 hover:underline">+91 98962
-                07016</a></p>
-            <p class="font-medium">✉️ <a href="mailto:devinirmalabcd@gmail.com"
-                class="text-yellow-600 hover:underline">devinirmalabcd@gmail.com</a></p>
-          </div>
-          <div class="w-full h-[400px] rounded-lg overflow-hidden shadow">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1728.1083274282153!2d76.83521250900172!3d29.97320299719316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e473fa7805415%3A0x9cc818f15e6d00!2sShiv%20Architect!5e0!3m2!1sen!2sin!4v1758644523159!5m2!1sen!2sin"
-             class="w-full h-full border-0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white text-center py-6">
-    <p>&copy; 2025 Shiv Architect. All Rights Reserved.</p>
-    <p class="mt-2 text-gray-400">Rotary Chowk, near Old Bus Stand, Thanesar, Haryana 136118</p>
-    <p class="mt-1 text-gray-400">
-      📞 <a href="tel:+919896207016" class="hover:underline">+91 98962 07016</a>
-    </p>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/9896207016" target="_blank" aria-label="whtsapp button"
-    class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
-    <i class='bx bxl-whatsapp text-3xl'></i>
-  </a>
-
-  <script src="./splash.js" type="application/javascript"></script>
-
 </body>
-
 </html>
