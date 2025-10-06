@@ -19,26 +19,34 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="fixed w-full bg-white shadow z-50">
-    <div class="container mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#home" class="text-2xl font-bold text-gray-900 railway font-medium">Ar Nirmal Saini</a>
-      <div class="space-x-6 hidden md:flex">
-        <a href="#home" class="hover:text-yellow-600">Home</a>
-        <a href="#about" class="hover:text-yellow-600">About</a>
-        <a href="#services" class="hover:text-yellow-600">Services</a>
-        <a href="#work" class="hover:text-yellow-600">Projects</a>
-        <a href="#contact" class="hover:text-yellow-600">Contact</a>
-      </div>
-      <button aria-label="menu button" id="menuBtn" class="md:hidden text-3xl"><i class='bx bx-menu'></i></button>
+<!-- Navbar -->
+<nav x-data="{ open: false }" class="fixed w-full bg-white shadow z-50">
+  <div class="container mx-auto flex items-center justify-between px-4 py-3">
+    <a href="#home" class="text-2xl font-bold text-gray-900 railway font-medium">Ar Nirmal Saini</a>
+    <div class="space-x-4 hidden md:flex">
+      <a href="#home" class="hover:text-yellow-600">Home</a>
+      <a href="#about" class="hover:text-yellow-600">About</a>
+      <a href="#services" class="hover:text-yellow-600">Services</a>
+      <a href="#work" class="hover:text-yellow-600">Projects</a>
+      <a href="#contact" class="hover:text-yellow-600">Contact</a>
     </div>
-    <div id="mobileMenu" class="hidden flex-col bg-gray-100 md:hidden px-4 pb-3 space-y-2">
-      <a href="#home" class="block">Home</a>
-      <a href="#about" class="block">About</a>
-      <a href="#services" class="block">Services</a>
-      <a href="#work" class="block">Projects</a>
-      <a href="#contact" class="block">Contact</a>
-    </div>
-  </nav>
+
+    <!-- Mobile Menu Button -->
+    <button @click="open = !open" aria-label="menu button" class="md:hidden text-3xl">
+      <i :class="open ? 'bx bx-x' : 'bx bx-menu'"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div x-show="open" x-transition class="flex flex-col bg-gray-100 md:hidden px-4 pb-3 space-y-1">
+    <a href="#home" class="block">Home</a>
+    <a href="#about" class="block">About</a>
+    <a href="#services" class="block">Services</a>
+    <a href="#work" class="block">Projects</a>
+    <a href="#contact" class="block">Contact</a>
+  </div>
+</nav>
+
 
   <!-- Hero Section Carousel with Smooth Fade -->
   <section id="home" class="relative h-screen overflow-hidden">
